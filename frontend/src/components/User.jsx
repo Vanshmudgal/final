@@ -8,7 +8,7 @@ const User = () => {
   const [score, setScore] = useState(0); // State to hold the score
 
   useEffect(() => {
-    fetch("https://final-8gnu.onrender.com/cities/random") // Backend API
+    fetch("http://localhost:5000/cities/random") // Backend API
       .then((res) => res.json())
       .then((data) => {
         setCities(data); // Backend data
@@ -33,7 +33,7 @@ const User = () => {
     setSelectedCity(null);
     setResult(null);
     setHints([]);
-    fetch("https://final-8gnu.onrender.com/cities/random") // Fetch a new city
+    fetch("http://localhost:5000/cities/random") // Fetch a new city
       .then((res) => res.json())
       .then((data) => {
         setCities(data); // Update cities with a new random city
